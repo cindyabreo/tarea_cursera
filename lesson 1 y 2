@@ -1,0 +1,27 @@
+head(iris)
+dim(iris)
+class(iris)
+
+#lesson 1
+list_class=lapply(iris, class)
+names(list_class)
+class(list_class)
+lapply(iris, sum)
+head(iris)
+head(iris[c(1:4)])
+lapply((iris[c(1:4)]),sum)
+lapply((iris[c(1:4)]),mean)
+sapply((iris[c(1:4)]),range)
+sapply((iris[c(1:4)]),length)
+
+#lesson 2
+head(iris[c(1:4)])
+vapply(iris[c(1:4)], fivenum,
+       c(Min. = 0, "1st Qu." = 0, Median = 0, "3rd Qu." = 0, Max. = 0))
+?vapply
+
+head(iris)
+tapply(iris$Sepal.Length, iris$Species, mean)
+tapply(iris$Sepal.Width, iris$Species, mean)
+tapply(iris$Petal.Length, iris$Species, mean)
+tapply(iris$Petal.Width, iris$Species, mean)
